@@ -2,7 +2,7 @@ from models.base_request import BaseRequest
 
 class emergency(BaseRequest):
 
-    def __init__(self,sr_id,type,requester_name,location,urgency_lvl,estimated_cost,status,hazard_lvl,response_time):
+    def __init__(self,sr_id,requester_name,location,urgency_lvl,estimated_cost,status,hazard_lvl,response_time):
         super().__init__(sr_id,'Emergency',requester_name,location,urgency_lvl,estimated_cost,status)
         self.hazard_lvl = hazard_lvl
         self.response_time = response_time

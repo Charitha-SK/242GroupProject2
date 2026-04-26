@@ -2,7 +2,7 @@ from models.base_request import BaseRequest
 
 class support(BaseRequest):
 
-    def __init__(self,sr_id,type,requester_name,location,urgency_lvl,estimated_cost,status,attendees,event_date='########'):
+    def __init__(self,sr_id,requester_name,location,urgency_lvl,estimated_cost,status,attendees,event_date='########'):
         super().__init__(sr_id,'Support',requester_name,location,urgency_lvl,estimated_cost,status)
         self.attendees = attendees
         self.event_date = event_date

@@ -1,7 +1,7 @@
 from models.base_request import BaseRequest
 
 class maintenance(BaseRequest):
-    def __init__(self,sr_id,type,requester_name,location,urgency_lvl,estimated_cost,status,issue_type,days_open,):
+    def __init__(self,sr_id,requester_name,location,urgency_lvl,estimated_cost,status,issue_type,days_open):
         super().__init__(sr_id,'Maintenance',requester_name,location,urgency_lvl,estimated_cost,status)
         self.issue_type = issue_type
         self.days_open = days_open
