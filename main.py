@@ -1,8 +1,6 @@
 from data.file_handler import FileHandler
 
-
 # Helper functions
-
 def view_all_requests(requests):
     # Displays a summary of all requests
     if not requests:
@@ -12,7 +10,6 @@ def view_all_requests(requests):
     print("\n--- All Requests ---")
     for row in requests:
         print(f"ID: {row[0]} | Type: {row[1]} | Location: {row[3]} | Status: {row[6]}")
-
 
 def add_request(requests):
     # Collects user input and adds a new request
@@ -66,7 +63,6 @@ def add_request(requests):
     requests.append(new_row)
     print("Request added.\n")
 
-
 def search_requests(requests):
     # Searches requests using a keyword
     keyword = input("\nSearch keyword: ").lower()
@@ -79,7 +75,6 @@ def search_requests(requests):
 
     if not found:
         print("No matching requests.\n")
-
 
 def update_status(requests):
     # Updates the status of a selected request
@@ -94,9 +89,7 @@ def update_status(requests):
 
     print("Request not found.\n")
 
-
 # Main program menu
-
 def main():
     file = FileHandler("service_requests.csv")
     requests = file.events_file
